@@ -30,8 +30,6 @@ filetype plugin on
 highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
 au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw,*.lua match OverLength /\%81v.\+/
 
-" custom key bindings
-
 " move current line up or down
 nnoremap <C-Up>   ddkP
 nnoremap <C-Down> ddp
