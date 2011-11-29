@@ -26,7 +26,7 @@ PS1='[\u@\h: \W]\$ '
 if [ `id -u` != "0" ]
 then
     line1="\n$line_color┌─$sep_color( $txtgrn\u $sep_color)$line_color──$sep_color( $line_color\w $sep_color)\n"
-    line2="└─$sep_color( $line_color\h $sep_color)$line_color──$txtblu>>> $txtrst"
+    line2="$line_color└─$sep_color( $line_color\h $sep_color)$line_color$txtblu >>> $txtrst"
 else
     line1="\n$line_color┌─$sep_color▪ $txtred\u $sep_color▪$line_color───$sep_color▪ $line_color\w\n"
     line2="└─$sep_color▪ $line_color\h $sep_color▪$line_color──$sep_color▪ $txtrst"
