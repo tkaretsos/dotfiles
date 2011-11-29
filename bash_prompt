@@ -17,7 +17,7 @@ txtgrn='\[\e[0;32m\]' # Green
 #txtmag='\[\e[0;35m\]' # Magenta
 
 sep_color=$txtblu
-line=$txtcyn
+line_color=$txtcyn
 
 # set a default prompt just in case
 PS1='[\u@\h: \W]\$ '
@@ -25,8 +25,8 @@ PS1='[\u@\h: \W]\$ '
 # select prompts based on user
 if [ `id -u` != "0" ]
 then
-    PS1="\n$line┌─$sep_color▪ $txtgrn\u $sep_color▪$line───$sep_color▪ $line\w\n└─$sep_color▪ $line\h $sep_color▪$line──$sep_color▪ $txtrst"
+    PS1="\n$line_color┌─$sep_color▪ $txtgrn\u $sep_color▪$line───$sep_color▪ $line_color\w\n└─$sep_color▪ $line_color\h $sep_color▪$line_color──$sep_color▪ $txtrst"
 else
-    PS1="\n$line┌─$sep_color▪ $txtred\u $sep_color▪$line───$sep_color▪ $line\w\n└─$sep_color▪ $line\h $sep_color▪$line──$sep_color▪ $txtrst"
+    PS1="\n$line_color┌─$sep_color▪ $txtred\u $sep_color▪$line───$sep_color▪ $line_color\w\n└─$sep_color▪ $line_color\h $sep_color▪$line_color──$sep_color▪ $txtrst"
 fi
 
