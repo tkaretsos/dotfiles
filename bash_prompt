@@ -24,7 +24,7 @@ if [ `whoami` != "root" ]; then
     line2="$txtcyn└─$txtblu> $txtrst"
 else
     line1="\n$txtcyn┌─$txtred> \u $txtblu@ $txtcyn\h $txtred<$txtcyn──$txtred> $txtcyn\w\n"
-    line2="$txtcyn└─$txtred> txtrst"
+    line2="$txtcyn└─$txtred> $txtrst"
 fi
 
 PS1=$line1$line2
