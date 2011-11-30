@@ -16,9 +16,6 @@ txtred='\[\e[0;31m\]' # Red
 #txtylw='\[\e[0;33m\]' # Yellow
 #txtmag='\[\e[0;35m\]' # Magenta
 
-# set a default prompt just in case
-PS1='[\u@\h: \W]\$ '
-
 # select prompts based on user
 if [ `whoami` != "root" ]; then
 #    line1="\n$txtcyn┌─$txtblu( $txtgrn\u $txtblu)$txtcyn──$txtblu( $txtcyn\w $txtblu)\n"
