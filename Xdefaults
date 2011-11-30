@@ -31,7 +31,6 @@ URxvt.color7    :#D3D3D7D7CFCF
 URxvt.color15   :#EEEEEEEEECEC
 
 URxvt.foreground        :#dcdcdc
-URxvt.background        :Black
 URxvt.background        :rgba:0000/0000/0000/ccdd
 URxvt.trasnparent       :true
 URxvt.shading           :10
