@@ -20,7 +20,11 @@ txtgrn='\[\e[0;32m\]' # Green
 if [ `whoami` != "root" ]; then
 #    line1="\n$txtcyn┌─$txtblu( $txtgrn\u $txtblu)$txtcyn──$txtblu( $txtcyn\w $txtblu)\n"
 #    line2="$txtcyn└─$txtblu( $txtcyn\h $txtblu)>$txtcyn> $txtrst"
-    line1="\n$txtcyn┌─$txtblu> $txtgrn\u $txtblu@ $txtcyn\h $txtblu<$txtcyn──$txtblu> $txtcyn\w\n"
+    if [ `hostname` == "penumbra" ]; then
+        line1="\n$txtcyn┌─$txtblu> $txtgrn\u $txtblu@ $txtred\h $txtblu<$txtcyn──$txtblu> $txtcyn\w\n"
+    else
+        line1="\n$txtcyn┌─$txtblu> $txtgrn\u $txtblu@ $txtcyn\h $txtblu<$txtcyn──$txtblu> $txtcyn\w\n"
+    fi
     line2="$txtcyn└─$txtblu> $txtrst"
 else
     line1="\n$txtcyn┌─$txtred> \u $txtblu@ $txtcyn\h $txtred<$txtcyn──$txtred> $txtcyn\w\n"
