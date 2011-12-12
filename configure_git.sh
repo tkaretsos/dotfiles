@@ -6,19 +6,18 @@
 #
 
 command="git config --global "
-config=("color.ui auto" \
-        "alias.co checkout" \
-        "alias.br branch" \
-        "alias.cv \"commit -v\"" \
-        "alias.st status" \
-        "alias.ff diff" \
-        "alias.cav \"commit -a -v\"" \
-        "alias.cam \"commit -a -m\"")
+config=("color.ui auto"
+        "alias.co checkout"
+        "alias.br branch"
+        "alias.cv \"commit -v\""
+        "alias.st status"
+        "alias.ff diff"
+        "alias.cav \"commit -a -v\""
+        "alias.cam \"commit -a -m\""
+       )
 
-#git config --global $config[1]
-for i in ${config[@]}; do
-    #`git config --global "${i}"`
-    exec git config --global ${i}
+for i in "${config[@]}"; do
+    eval $command "${i}"
 done
 
 unset command
