@@ -5,14 +5,20 @@
 # configure git color and aliases
 #
 
-# set color
-git config --global color.ui auto
+command="git config --global "
+config=("color.ui auto"
+        "alias.co checkout"
+        "alias.br branch"
+        "alias.cv \"commit -v\""
+        "alias.st status"
+        "alias.ff diff"
+        "alias.cav \"commit -a -v\""
+        "alias.cam \"commit -a -m\""
+       )
 
-# set aliases
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.cv "commit -v"
-git config --global alias.st status
-git config --global alias.ff diff
-git config --global alias.cav "commit -v -a"
-git config --global alias.cam "commit -a -m"
+for i in "${config[@]}"; do
+    eval $command "${i}"
+done
+
+unset command
+unset config
