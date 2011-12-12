@@ -5,7 +5,7 @@
 # configure git color and aliases
 #
 
-command="git config --global "
+cmd="git config --global"
 config=("color.ui auto"
         "alias.co checkout"
         "alias.br branch"
@@ -17,7 +17,7 @@ config=("color.ui auto"
        )
 
 for i in "${config[@]}"; do
-    eval $command "${i}"
+    eval $cmd "${i}"
 done
 
 unset command
