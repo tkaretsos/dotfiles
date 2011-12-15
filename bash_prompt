@@ -33,3 +33,8 @@ fi
 
 PS1=$line1$line2
 
+unset txtrst
+unset txtblu
+unset txtcyn
+unset txtred
+unset txtgrn
