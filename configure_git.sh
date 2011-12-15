@@ -16,6 +16,9 @@ configs=("color.ui auto"
          "alias.cam \"commit -a -m\""
         )
 
+eval $cmd "--remove-section color"
+eval $cmd "--remove-section alias"
+
 for i in "${configs[@]}"; do
     eval $cmd "${i}"
 done
