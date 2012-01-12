@@ -18,6 +18,9 @@ alias mysqls='sudo /etc/rc.d/mysqld'
 
 # exports
 export EDITOR="/usr/bin/vim"
+export GIT_PS1_SHOWDIRTYSTATE="auto"
+export GIT_PS1_SHOWSTASHSTATE="auto"
+export GIT_PS1_SHOWUNTRACKEDFILES="auto"
 
 # set the prompt
 if [ -f $HOME/.bash_prompt ]; then

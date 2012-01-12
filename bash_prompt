@@ -8,33 +8,39 @@
 #
 
 # colors
-txtrst='\[\e[0m\]'    # Text Reset
-txtblu='\[\e[0;34m\]' # Blue
-txtcyn='\[\e[0;36m\]' # Cyan
-txtred='\[\e[0;31m\]' # Red
-txtgrn='\[\e[0;32m\]' # Green
-#txtylw='\[\e[0;33m\]' # Yellow
-#txtmag='\[\e[0;35m\]' # Magenta
+rst='\[\e[0m\]'    # Text Reset
+blu='\[\e[0;34m\]' # Blue
+cyn='\[\e[0;36m\]' # Cyan
+red='\[\e[0;31m\]' # Red
+grn='\[\e[0;32m\]' # Green
+#ylw='\[\e[0;33m\]' # Yellow
+#mag='\[\e[0;35m\]' # Magenta
+
+if [[ `type -t __git_ps1` == "function" ]]; then
+    git_prompt='$(__git_ps1 "\[\e[0;34m\]( \[\e[1;35m\]%s \[\e[0;34m\])")'
+else
+    git_prompt=""
+fi
 
 # select prompts based on user
 if [ `whoami` != "root" ]; then
-#    line1="\n$txtcyn┌─$txtblu( $txtgrn\u $txtblu)$txtcyn──$txtblu( $txtcyn\w $txtblu)\n"
-#    line2="$txtcyn└─$txtblu( $txtcyn\h $txtblu)>$txtcyn> $txtrst"
     if [ `hostname` == "penumbra" ]; then
-        line1="\n$txtcyn┌─$txtblu> $txtgrn\u $txtblu@ $txtred\h $txtblu<$txtcyn──$txtblu> $txtcyn\w\n"
+        line1="\n$cyn┌─$blu> $grn\u $blu@ $red\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
     else
-        line1="\n$txtcyn┌─$txtblu> $txtgrn\u $txtblu@ $txtcyn\h $txtblu<$txtcyn──$txtblu> $txtcyn\w\n"
+        line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
     fi
-    line2="$txtcyn└─$txtblu> $txtrst"
+    line2="\n$cyn└─$blu> $rst"
 else
-    line1="\n$txtcyn┌─$txtred> \u $txtblu@ $txtcyn\h $txtred<$txtcyn──$txtred> $txtcyn\w\n"
-    line2="$txtcyn└─$txtred> $txtrst"
+    line1="\n$cyn┌─$red> \u $blu@ $cyn\h $red<$cyn─$git_prompt$cyn─$red> $cyn\w"
+    line2="\n$cyn└─$red> $rst"
 fi
 
 PS1=$line1$line2
 
-unset txtrst
-unset txtblu
-unset txtcyn
-unset txtred
-unset txtgrn
+unset rst
+unset blu
+unset cyn
+unset red
+unset grn
+unset git_prompt
+
