@@ -15,6 +15,7 @@ alias cls='clear'
 alias ping='ping -c 3'
 alias apache='sudo /etc/rc.d/httpd'
 alias mysqls='sudo /etc/rc.d/mysqld'
+alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 
 # exports
 export EDITOR="/usr/bin/vim"
