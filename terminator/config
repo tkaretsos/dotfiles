@@ -1,0 +1,37 @@
+[global_config]
+  window_state = maximise
+  handle_size = 1
+  title_hide_sizetext = True
+  dbus = True
+  borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#5a0001"
+  tab_position = hidden
+  title_inactive_bg_color = "#000000"
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    use_system_font = False
+    font = Monospace 8
+    background_darkness = 0.8
+    scrollback_lines = 5000
+    background_type = image
+    background_image = /home/thanasis/Dropbox/pictures/spooky-house-2897-1920x1080.jpg
+    scroll_background = False
+    scroll_on_output = False
+    icon_bell = False
+    show_titlebar = False
+    cursor_shape = underline
+    antialias = False
+    copy_on_selection = True
+    allow_bold = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
