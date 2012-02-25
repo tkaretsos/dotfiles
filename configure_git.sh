@@ -11,7 +11,7 @@ configs=("color.ui auto"
          "alias.br branch"
          "alias.cv \"commit --verbose\""
          "alias.st status"
-         "alias.ff diff --ignore-all-space"
+         "alias.ff \"diff --ignore-all-space\""
          "alias.cav \"commit --all --verbose\""
          "alias.cam \"commit --all -m\""
         )
