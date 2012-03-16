@@ -5,6 +5,8 @@
 loadplugins '\.(js|penta)$'
 group user
 
+set guioptions=Cs
+
 " A builtin bit.ly shortener.
 " Based on http://github.com/scy/dotscy/commit/4526f23a09b2ae51fb7f4b1e2ed3aec84f318fa5
 " source : http://bit.ly/rbz0nr
