@@ -32,5 +32,7 @@ map -silent gy -js shortenURLBitLy(buffer.URL)
 " remove 'pentadactyl' from page title
 set titlestring=''
 
+colorscheme desert
+
 " vim: set ft=vim:
 
