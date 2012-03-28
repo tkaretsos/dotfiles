@@ -18,6 +18,7 @@ alias mysqls='sudo /etc/rc.d/mysqld'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 
 # exports
+source /usr/share/bash-completion/completions/git
 export EDITOR="/usr/bin/vim"
 export GIT_PS1_SHOWDIRTYSTATE="auto"
 export GIT_PS1_SHOWSTASHSTATE="auto"
