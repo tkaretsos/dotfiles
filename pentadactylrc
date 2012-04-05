@@ -34,5 +34,8 @@ set titlestring=''
 
 colorscheme desert
 
+" style options (no more yellow stuff)
+highlight HintElem background-color: #698A8A; color: black !important;
+
 " vim: set ft=vim:
 
