@@ -32,6 +32,12 @@ map -silent gy -js shortenURLBitLy(buffer.URL)
 " remove 'pentadactyl' from page title
 set titlestring=''
 
+" show navigation bar on startup
+set guioptions+=T
+
+" hide add-on bar on startup
+set guioptions-=s
+
 colorscheme desert
 
 " style options (no more yellow stuff)
