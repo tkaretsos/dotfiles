@@ -36,7 +36,7 @@ set titlestring=''
 set guioptions+=T
 
 " hide add-on bar on startup
-set guioptions-=s
+" set guioptions-=s
 
 colorscheme desert
 
