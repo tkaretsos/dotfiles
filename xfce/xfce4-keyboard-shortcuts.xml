@@ -3,20 +3,27 @@
 <channel name="xfce4-keyboard-shortcuts" version="1.0">
   <property name="commands" type="empty">
     <property name="default" type="empty">
-      <property name="&lt;Alt&gt;F2" type="empty"/>
+      <property name="&lt;Alt&gt;F1" type="empty"/>
+      <property name="&lt;Alt&gt;F2" type="empty">
+        <property name="startup-notify" type="empty"/>
+      </property>
+      <property name="&lt;Alt&gt;F3" type="empty">
+        <property name="startup-notify" type="empty"/>
+      </property>
       <property name="&lt;Control&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="XF86Display" type="empty"/>
       <property name="&lt;Super&gt;p" type="empty"/>
       <property name="&lt;Control&gt;Escape" type="empty"/>
+      <property name="XF86WWW" type="empty"/>
+      <property name="XF86Mail" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;r" type="string" value="/usr/bin/xfrun4"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="/usr/bin/xflock4"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="/usr/bin/xfce4-session-logout --fast --halt"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="/usr/bin/xfce4-session-logout --fast --reboot"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="/usr/bin/xfce4-session-logout"/>
-      <property name="&lt;Super&gt;w" type="string" value="/usr/bin/firefox">
+      <property name="&lt;Super&gt;w" type="string" value="/usr/bin/chromium">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="&lt;Super&gt;t" type="string" value="/usr/bin/terminator">
@@ -34,6 +41,7 @@
       <property name="&lt;Super&gt;0" type="string" value="/usr/bin/amixer set Master toggle"/>
       <property name="&lt;Super&gt;equal" type="string" value="/usr/bin/amixer set Master 2%+"/>
       <property name="&lt;Super&gt;minus" type="string" value="/usr/bin/amixer set Master 2%-"/>
+      <property name="&lt;Super&gt;r" type="string" value="/usr/bin/xfrun4 --collapsed"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
