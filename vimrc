@@ -1,6 +1,7 @@
 "
 " ~/.vimrc
 "
+set encoding=utf-8
 set nocompatible
 set showmatch
 set incsearch
