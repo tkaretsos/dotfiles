@@ -17,7 +17,7 @@
     background_darkness = 0.8
     scrollback_lines = 5000
     background_type = image
-    background_image = /home/ryndor/Grive/pictures/wallpapers/terminator_bg.jpg
+    background_image = /home/ryndor/Google\ Drive/pictures/wallpapers/terminator_bg.jpg
     scroll_background = False
     scroll_on_output = False
     icon_bell = False
