@@ -13,18 +13,20 @@ alias grep='grep --color=auto'
 alias ..='cd ..'
 alias cls='clear'
 alias ping='ping -c 3'
-alias apache='sudo /etc/rc.d/httpd'
-alias mysqls='sudo /etc/rc.d/mysqld'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 
 # exports
 export EDITOR="/usr/bin/vim"
-export GIT_PS1_SHOWDIRTYSTATE="auto"
-export GIT_PS1_SHOWSTASHSTATE="auto"
-export GIT_PS1_SHOWUNTRACKEDFILES="auto"
-export GIT_PS1_SHOWUPSTREAM="auto"
 
 # set the prompt
+if [ -f $HOME/.git-prompt.sh ]; then
+    source $HOME/.git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE="auto"
+    export GIT_PS1_SHOWSTASHSTATE="auto"
+    export GIT_PS1_SHOWUNTRACKEDFILES="auto"
+    export GIT_PS1_SHOWUPSTREAM="auto"
+fi
+
 if [ -f $HOME/.bash_prompt ]; then
     . $HOME/.bash_prompt
 else
