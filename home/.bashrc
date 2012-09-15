@@ -14,6 +14,7 @@ alias ..='cd ..'
 alias cls='clear'
 alias ping='ping -c 3'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
+alias emacs='emacs -nw'
 
 # exports
 export EDITOR="/usr/bin/vim"
@@ -36,4 +37,6 @@ fi
 # enable bash completition when preciding:
 complete -cf sudo
 complete -cf man
+
+export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 
