@@ -40,8 +40,8 @@
       <property name="&lt;Super&gt;minus" type="string" value="/usr/bin/amixer set Master 2%-"/>
       <property name="&lt;Super&gt;r" type="string" value="/usr/bin/xfrun4 --collapsed"/>
       <property name="&lt;Super&gt;plus" type="string" value="/usr/bin/amixer set Master 2%+"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="/usr/bin/systemctl halt"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="/usr/bin/systemctl reboot"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="/usr/bin/systemctl poweroff"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
