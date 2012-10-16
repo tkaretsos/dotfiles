@@ -25,7 +25,7 @@ set t_Co=256
 colorscheme jellybeans
 
 " plugins
-" filetype plugin on
+filetype plugin on
 
 " highlight after 80 column
 highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
