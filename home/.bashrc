@@ -38,5 +38,6 @@ fi
 complete -cf sudo
 complete -cf man
 
+export PATH=$PATH:/usr/local/heroku/bin
 export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 
