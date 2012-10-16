@@ -25,11 +25,11 @@ set t_Co=256
 colorscheme jellybeans
 
 " plugins
-filetype plugin on
+" filetype plugin on
 
 " highlight after 80 column
 highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
-au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw,*.lua match OverLength /\%81v.\+/
+au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw match OverLength /\%81v.\+/
 
 " move current line up or down
 nnoremap <C-Up>   ddkP
