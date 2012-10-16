@@ -7,17 +7,20 @@
 
 # aliases
 alias ls='ls -hp --color=auto'
+alias sl='ls'
 alias ll='ls -l'
 alias la='ls -la'
+alias al='la'
 alias grep='grep --color=auto'
 alias ..='cd ..'
-alias cls='clear'
 alias ping='ping -c 3'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
-alias emacs='emacs -nw'
+alias cower="cower --target=/tmp/ --color='auto'"
 
 # exports
 export EDITOR="/usr/bin/vim"
+export PATH=$PATH:/usr/local/heroku/bin
+export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 
 # set the prompt
 if [ -f $HOME/.git-prompt.sh ]; then
@@ -37,7 +40,4 @@ fi
 # enable bash completition when preciding:
 complete -cf sudo
 complete -cf man
-
-export PATH=$PATH:/usr/local/heroku/bin
-export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 
