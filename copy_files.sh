@@ -6,10 +6,18 @@ else
   homedir="/home/$(whoami)"
 fi
 
+# dotfiles
 for f in `ls -a home/ | egrep .[^.]`; do
   fn=$(basename $f)
   rm -r $homedir/$fn
   ln -s `pwd`/home/$f $homedir/$fn
+done
+
+# utility scripts
+mkdir -p $homedir/Documents/util_scripts
+for f in `ls util_scripts`; do
+  fn=$(basename $f)
+  ln -s `pwd`/util_scripts/$f $homedir/Documents/util_scripts/$fn
 done
 
 # xfce4 shortkeys
