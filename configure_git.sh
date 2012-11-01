@@ -18,6 +18,7 @@ configs=("color.ui auto"
 
 eval $cmd "--remove-section color"
 eval $cmd "--remove-section alias"
+eval $cmd "push.default matching"
 
 for i in "${configs[@]}"; do
     eval $cmd "${i}"
