@@ -42,6 +42,7 @@
       <property name="&lt;Super&gt;plus" type="string" value="/usr/bin/amixer set Master 2%+"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="/usr/bin/systemctl reboot"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="/usr/bin/systemctl poweroff"/>
+      <property name="&lt;Super&gt;F9" type="string" value="/bin/bash /home/recu/Documents/util_scripts/toggle_touchpad.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
