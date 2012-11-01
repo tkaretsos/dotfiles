@@ -17,6 +17,7 @@ done
 mkdir -p $homedir/Documents/util_scripts
 for f in `ls util_scripts`; do
   fn=$(basename $f)
+  rm -r $homedir/Documents/util_scripts/$fn
   ln -s `pwd`/util_scripts/$f $homedir/Documents/util_scripts/$fn
 done
 
