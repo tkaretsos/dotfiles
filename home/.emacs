@@ -1,6 +1,3 @@
- ;; enable color-themes
-(require 'color-theme)
-
  ;; Linux style for C and C++
 (setq c-default-style "linux" c-basic-offset 2)
 (global-linum-mode t)
