@@ -33,6 +33,7 @@ display=Display
 {b7693c78-46ea-4f51-b7ae-ee3bfbb2cb79}=Meta+Esc
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search
 {dda17ce2-23b1-42b3-ae88-efcf4d2a8296}=Print
+{e3be82b6-2f29-4e22-9c16-a7f30a94529f}=Meta+D
 {ec64f283-a603-4ca1-b6fe-9150122701b8}=Meta+T
 
 [klipper][Global Shortcuts]
@@ -44,7 +45,7 @@ repeat_action=Ctrl+Alt+R
 show-on-mouse-pos=none
 
 [kmix][Global Shortcuts]
-Decrease volume  - Capture, HDA Intel PCH=none
+Decrease volume  - Capture, HDA Intel PCH=Meta+Shift+F11
 Decrease volume  - Digital, HDA Intel PCH=none
 Decrease volume  - Headphone, HDA Intel PCH=none
 Decrease volume  - IEC958, HDA Intel PCH=none
@@ -52,10 +53,10 @@ Decrease volume  - Internal Mic Boost, HDA Intel PCH=none
 Decrease volume  - Internal Mic, HDA Intel PCH=none
 Decrease volume  - Master, HDA Intel PCH=none
 Decrease volume  - Mic Boost, HDA Intel PCH=none
-Decrease volume  - Mic, HDA Intel PCH=Meta+Shift+F11
+Decrease volume  - Mic, HDA Intel PCH=none
 Decrease volume  - PCM, HDA Intel PCH=none
 Decrease volume  - Speaker, HDA Intel PCH=none
-Increase volume  - Capture, HDA Intel PCH=none
+Increase volume  - Capture, HDA Intel PCH=Meta+Shift+F12
 Increase volume  - Digital, HDA Intel PCH=none
 Increase volume  - Headphone, HDA Intel PCH=none
 Increase volume  - IEC958, HDA Intel PCH=none
@@ -63,7 +64,7 @@ Increase volume  - Internal Mic Boost, HDA Intel PCH=none
 Increase volume  - Internal Mic, HDA Intel PCH=none
 Increase volume  - Master, HDA Intel PCH=none
 Increase volume  - Mic Boost, HDA Intel PCH=none
-Increase volume  - Mic, HDA Intel PCH=Meta+Shift+F12
+Increase volume  - Mic, HDA Intel PCH=none
 Increase volume  - PCM, HDA Intel PCH=none
 Increase volume  - Speaker, HDA Intel PCH=none
 Toggle mute  - Capture, HDA Intel PCH=none
@@ -111,6 +112,10 @@ Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
+
+[ktorrent][Global Shortcuts]
+queue_suspend=Alt+Shift+P
+show_kt=Alt+Shift+T
 
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Ctrl+Alt+A
