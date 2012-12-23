@@ -40,3 +40,6 @@ fi
 complete -cf sudo
 complete -cf man
 
+# disable touchpad
+/home/`whoami`/dotfiles/util_scripts/toggle_touchpad off
+
