@@ -15,6 +15,8 @@ alias ..='cd ..'
 alias ping='ping -c 3'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 alias cower="cower --target=/tmp/ --color='auto'"
+alias mysql_start="sudo systemctl start mysqld"
+alias mysql_stop="sudo systemctl stop mysqld"
 
 # exports
 export EDITOR="/usr/bin/vim"
