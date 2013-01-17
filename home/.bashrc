@@ -17,6 +17,10 @@ alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 alias cower="cower --target=/tmp/ --color='auto'"
 alias mysql_start="sudo systemctl start mysqld"
 alias mysql_stop="sudo systemctl stop mysqld"
+## LiU related stuff
+alias liu_connect="ssh thaka527@astmatix.ida.liu.se"
+alias liu_mount="sshfs -o idmap=user thaka527@astmatix.ida.liu.se:/home/thaka527 \
+                 /home/`whoami`/astmatix"
 
 # exports
 export EDITOR="/usr/bin/vim"
