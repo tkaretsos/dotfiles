@@ -21,6 +21,9 @@ alias mysql_stop="sudo systemctl stop mysqld"
 alias liu_connect="ssh thaka527@astmatix.ida.liu.se"
 alias liu_mount="sshfs -o idmap=user thaka527@astmatix.ida.liu.se:/home/thaka527 \
                  /home/`whoami`/astmatix"
+## GCC
+alias g++11="g++ -g -std=c++11 -pedantic -Wall -Wextra"
+alias g++98="g++ -g -std=c++98 -pedantic -Wall -Wextra"
 
 # exports
 export EDITOR="/usr/bin/vim"
