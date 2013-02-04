@@ -13,8 +13,8 @@
   [[default]]
     scrollbar_position = hidden
     use_system_font = False
-    font = Monospace 8
-    background_darkness = 0.8
+    font = Monospace 10
+    background_darkness = 0.7
     scrollback_lines = 5000
     background_type = image
     background_image = /home/recu/Google Drive/pictures/wallpapers/terminator_bg.jpg
@@ -23,7 +23,6 @@
     icon_bell = False
     show_titlebar = False
     cursor_shape = underline
-    antialias = False
     copy_on_selection = True
     allow_bold = False
 [layouts]
