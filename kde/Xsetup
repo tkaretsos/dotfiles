@@ -1,0 +1,10 @@
+#! /bin/sh
+#/usr/share/config/kdm
+# Xsetup - run as root before the login dialog appears
+
+if [ `xrandr | grep "VGA" | cut -d' ' -f2` == "connected" ]; then
+  xrandr --output LVDS1 --mode 1366x768 --output $(xrandr | grep "VGA" | cut -d' ' -f1) --mode 1920x1080 --primary --right-of LVDS1
+else
+  xrandr --output LVDS1 --mode 1366x768 --primary
+fi
+
