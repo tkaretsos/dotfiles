@@ -7,7 +7,7 @@ else
 fi
 
 # dotfiles
-for f in `ls -a home/ | egrep .[^.]`; do
+for f in `ls -1A home/`; do
   fn=$(basename $f)
   rm -r $homedir/$fn
   ln -s `pwd`/home/$f $homedir/$fn
