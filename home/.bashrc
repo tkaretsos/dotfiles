@@ -9,7 +9,7 @@
 alias ls='ls -hp --color=auto'
 alias sl='ls'
 alias ll='ls -l'
-alias la='ls -la'
+alias la='ls -lA'
 alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ping='ping -c 3'
