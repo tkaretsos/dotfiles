@@ -3,6 +3,29 @@ Switch keyboard layout to Greek=none
 Switch keyboard layout to Swedish=none
 Switch to Next Keyboard Layout=none
 
+[amarok][Global Shortcuts]
+decreaseVolume=none
+increaseVolume=Meta++
+loveTrack=none
+mute=none
+next=Media Next
+play_pause=Media Play
+playlist_add=Meta+A
+prev=Media Previous
+rate1=none
+rate2=none
+rate3=none
+rate4=none
+rate5=Meta+5
+replay=none
+seek_backward=Meta+Shift+-
+seek_forward=Meta+Shift++
+showNotificationPopup=Meta+O
+skipTrack=none
+stop=Media Stop
+stop_after_current=Meta+Shift+V
+toggleMainWindow=none
+
 [juk][Global Shortcuts]
 back=Ctrl+Alt+Left
 forward=Ctrl+Alt+Right
@@ -17,7 +40,16 @@ volumeUp=Ctrl+Alt+Shift+Up
 
 [kactivitymanagerd][Global Shortcuts]
 switch-to-activity-c202d7b6-04be-43cb-af52-7ac201a6c69b=none
+switch-to-activity-e84a9c7e-ba41-494c-a885-8306e30d62d9=none
 switch-to-activity-f78a0d6b-49ce-4ad3-9bf7-6323879968f4=none
+
+[kalarm][Global Shortcuts]
+newAudio=none
+newCommand=none
+newDisplay=none
+newEmail=none
+spread=none
+stopAudio=none
 
 [kded][Global Shortcuts]
 Decrease Screen Brightness=Meta+F5
@@ -42,6 +74,7 @@ cycleNextAction=none
 cyclePrevAction=none
 edit_clipboard=none
 repeat_action=Ctrl+Alt+R
+show-barcode=none
 show-on-mouse-pos=none
 
 [kmix][Global Shortcuts]
@@ -88,7 +121,6 @@ Set_Away_Back=Ctrl+Shift+W
 ShowContactList=Ctrl+Alt+O
 
 [krunner][Global Shortcuts]
-Lock Session=Ctrl+Alt+L
 PowerDevil=none
 Run Command=Meta+R
 Run Command on clipboard contents=Alt+Shift+F2
@@ -107,8 +139,12 @@ solid=none
 webshortcuts=none
 windows=none
 
+[kscreenlocker][Global Shortcuts]
+Lock Session=Ctrl+Alt+L
+
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
+Lock Session=none
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
@@ -144,7 +180,7 @@ Next Layout=Meta+PgDown
 Previous Layout=Meta+PgUp
 Remove Window From Group=none
 Setup Window Shortcut=none
-Show Desktop=Meta+M
+Show Desktop=Meta+V
 ShowDesktopGrid=Ctrl+F8
 Suspend Compositing=Alt+Shift+F12
 Switch Focus Down=Meta+J
@@ -213,10 +249,10 @@ Window Fullscreen=none
 Window Grow Horizontal=none
 Window Grow Vertical=none
 Window Lower=none
-Window Maximize=none
+Window Maximize=Meta+M
 Window Maximize Horizontal=none
 Window Maximize Vertical=none
-Window Minimize=none
+Window Minimize=Meta+N
 Window Move=none
 Window No Border=none
 Window On All Desktops=none
@@ -280,6 +316,8 @@ view_zoom_out=Meta+-
 Next Activity=Meta+Tab
 Previous Activity=Meta+Shift+Tab
 Show Dashboard=Ctrl+F12
+Stop Activity=Meta+S
+SystemTray-Klipper-6=none
 Systemtray-Klipper-6=Ctrl+Alt+V
 manage activities=Meta+Q
 
