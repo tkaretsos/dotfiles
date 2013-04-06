@@ -17,11 +17,19 @@ alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 alias cower="cower --target=/tmp/ --color='auto'"
 alias mysql_start="sudo systemctl start mysqld"
 alias mysql_stop="sudo systemctl stop mysqld"
+
 ## LiU related stuff
 alias liu_connect="ssh -Y thaka527@astmatix.ida.liu.se"
 alias liu_mount="sshfs -o idmap=user thaka527@astmatix.ida.liu.se:/home/thaka527 \
                  /home/`whoami`/astmatix"
 alias liu_unmount="fusermount -u /home/`whoami`/astmatix"
+
+## NSC
+alias triolith_connect="ssh x_athka@triolith.nsc.liu.se"
+alias triolith_mount="sshfs x_athka@triolith.nsc.liu.se:/home/x_athka \
+                      /home/`whoami`/triolith/"
+alias triolith_unmount="fusermount -u /home/`whoami`/triolith/"
+
 ## GCC
 alias g++11="g++ -g -std=c++11 -pedantic -Wall -Wextra"
 alias g++98="g++ -g -std=c++98 -pedantic -Wall -Wextra"
