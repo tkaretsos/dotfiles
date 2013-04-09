@@ -24,11 +24,7 @@ fi
 
 # select prompts based on user
 if [ `whoami` != "root" ]; then
-    if [ `hostname` == "penumbra" ]; then
-        line1="\n$cyn┌─$blu> $grn\u $blu@ $red\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
-    else
-        line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
-    fi
+    line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
     line2="\n$cyn└─$blu> $rst"
 else
     line1="\n$cyn┌─$red> \u $blu@ $cyn\h $red<$cyn─$git_prompt$cyn─$red> $cyn\w"
@@ -43,4 +39,6 @@ unset cyn
 unset red
 unset grn
 unset git_prompt
+unset line1
+unset line2
 
