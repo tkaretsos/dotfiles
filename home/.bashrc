@@ -25,14 +25,14 @@ alias liu_mount="sshfs -o idmap=user thaka527@astmatix.ida.liu.se:/home/thaka527
 alias liu_unmount="fusermount -u /home/`whoami`/astmatix"
 
 ## NSC
-alias triolith_connect="ssh -Y x_athka@triolith.nsc.liu.se"
+alias triolith_connect="ssh -Y x_athka@triolith3.nsc.liu.se"
 alias triolith_mount="sshfs x_athka@triolith.nsc.liu.se:/home/x_athka \
                       /home/`whoami`/triolith/"
 alias triolith_unmount="fusermount -u /home/`whoami`/triolith/"
 
 ## GCC
-alias g++11="g++ -g -std=c++11 -pedantic -Wall -Wextra"
-alias g++98="g++ -g -std=c++98 -pedantic -Wall -Wextra"
+alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
+alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
 
 # exports
 export EDITOR="/usr/bin/vim"
