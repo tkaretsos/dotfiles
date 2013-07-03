@@ -5,7 +5,6 @@ set encoding=utf-8
 set nocompatible
 set showmatch
 set incsearch
-set hlsearch
 syntax enable
 set history=100
 set backspace=eol,start,indent

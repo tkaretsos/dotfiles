@@ -31,6 +31,7 @@ alias triolith_mount="sshfs x_athka@triolith.nsc.liu.se:/home/x_athka \
 alias triolith_unmount="fusermount -u /home/`whoami`/triolith/"
 
 ## GCC
+alias gccaf="gcc -ansi -pedantic -Wall"
 alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
 alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
 
