@@ -30,6 +30,12 @@ alias triolith_mount="sshfs x_athka@triolith.nsc.liu.se:/home/x_athka \
                       /home/`whoami`/triolith/"
 alias triolith_unmount="fusermount -u /home/`whoami`/triolith/"
 
+#TDDC88
+alias pumi_connect="ssh thaka527@pumi-1.ida.liu.se"
+alias pumi_mount="sshfs thaka527@pumi-1.ida.liu.se:/home/thaka527 /home/`whoami`/pumi"
+alias pumi_unmount="fusermount -u /home/`whoami`/pumi"
+
+
 ## GCC
 alias gccaf="gcc -ansi -pedantic -Wall"
 alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
