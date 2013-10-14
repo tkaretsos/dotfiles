@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux -2
 
 # aliases
 alias ls='ls -hp --color=auto'
