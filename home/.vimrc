@@ -10,9 +10,9 @@ set history=100
 set backspace=eol,start,indent
 set ruler
 set number
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set wildmenu
 set showcmd
