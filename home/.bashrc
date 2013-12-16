@@ -20,12 +20,10 @@ alias mysql_start="sudo systemctl start mysqld"
 alias mysql_stop="sudo systemctl stop mysqld"
 
 ## LiU related stuff
-alias liu_mount="sshfs -o idmap=user liu:/home/thaka527 ~/astmatix"
-alias liu_unmount="fusermount -u ~/astmatix"
-
-#TDDC88
-alias pumi_mount="sshfs pumi:/home/thaka527 ~/pumi"
-alias pumi_unmount="fusermount -u ~/pumi"
+alias ida_mount="sshfs -o idmap=user ida:/home/thaka527 ~/astmatix"
+alias ida_unmount="fusermount -u ~/astmatix"
+alias isy_mount="sshfs -o idmap=user isy:/edu/thaka527 ~/southfork"
+alias isy_unmount="fusermount -u ~/southfork"
 
 # virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
