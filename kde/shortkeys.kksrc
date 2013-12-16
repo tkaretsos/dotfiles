@@ -1,4 +1,5 @@
 [KDE Keyboard Layout Switcher][Global Shortcuts]
+Switch keyboard layout to English (US)=none
 Switch keyboard layout to Greek=none
 Switch keyboard layout to Swedish=none
 Switch to Next Keyboard Layout=none
@@ -10,7 +11,7 @@ loveTrack=none
 mute=none
 next=Media Next
 play_pause=Media Play
-playlist_add=Meta+A
+playlist_add=none
 prev=Media Previous
 rate1=none
 rate2=none
@@ -52,11 +53,14 @@ spread=none
 stopAudio=none
 
 [kded][Global Shortcuts]
+Decrease Keyboard Brightness=Keyboard Brightness Down
 Decrease Screen Brightness=Meta+F5
 Hibernate=Hibernate
+Increase Keyboard Brightness=Keyboard Brightness Up
 Increase Screen Brightness=Meta+F6
 PowerOff=Power Off
 Sleep=Sleep
+Toggle Keyboard Backlight=Keyboard Light On/Off
 display=Display
 
 [khotkeys][Global Shortcuts]
@@ -87,7 +91,9 @@ Decrease volume  - Internal Mic, HDA Intel PCH=none
 Decrease volume  - Master, HDA Intel PCH=none
 Decrease volume  - Mic Boost, HDA Intel PCH=none
 Decrease volume  - Mic, HDA Intel PCH=none
+Decrease volume  - Mic, Logitech USB Headset=none
 Decrease volume  - PCM, HDA Intel PCH=none
+Decrease volume  - PCM, Logitech USB Headset=none
 Decrease volume  - Speaker, HDA Intel PCH=none
 Increase volume  - Capture, HDA Intel PCH=Meta+Shift+F12
 Increase volume  - Digital, HDA Intel PCH=none
@@ -98,7 +104,9 @@ Increase volume  - Internal Mic, HDA Intel PCH=none
 Increase volume  - Master, HDA Intel PCH=none
 Increase volume  - Mic Boost, HDA Intel PCH=none
 Increase volume  - Mic, HDA Intel PCH=none
+Increase volume  - Mic, Logitech USB Headset=none
 Increase volume  - PCM, HDA Intel PCH=none
+Increase volume  - PCM, Logitech USB Headset=none
 Increase volume  - Speaker, HDA Intel PCH=none
 Toggle mute  - Capture, HDA Intel PCH=none
 Toggle mute  - Digital, HDA Intel PCH=none
@@ -109,7 +117,9 @@ Toggle mute  - Internal Mic, HDA Intel PCH=none
 Toggle mute  - Master, HDA Intel PCH=none
 Toggle mute  - Mic Boost, HDA Intel PCH=none
 Toggle mute  - Mic, HDA Intel PCH=none
+Toggle mute  - Mic, Logitech USB Headset=none
 Toggle mute  - PCM, HDA Intel PCH=none
+Toggle mute  - PCM, Logitech USB Headset=none
 Toggle mute  - Speaker, HDA Intel PCH=none
 decrease_volume=Meta+F11
 increase_volume=Meta+F12
@@ -128,6 +138,7 @@ Show System Activity=Ctrl+Esc
 Switch User=Ctrl+Alt+Ins
 bookmarks=none
 desktopsessions=none
+kdevelopsessions=none
 locations=none
 nepomuksearch=none
 org.kde.activities=none
@@ -140,11 +151,11 @@ webshortcuts=none
 windows=none
 
 [kscreenlocker][Global Shortcuts]
-Lock Session=Ctrl+Alt+L
+Lock Session=none
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
-Lock Session=none
+Lock Session=Ctrl+Alt+L
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
@@ -218,6 +229,7 @@ Switch to Desktop 9=none
 Switch to Next Desktop=none
 Switch to Next Screen=none
 Switch to Previous Desktop=none
+Switch to Previous Screen=none
 Switch to Screen 0=none
 Switch to Screen 1=none
 Switch to Screen 2=none
@@ -238,8 +250,8 @@ Walk Through Windows=Alt+Tab
 Walk Through Windows (Reverse)=Alt+Shift+Backtab
 Walk Through Windows Alternative=none
 Walk Through Windows Alternative (Reverse)=none
-Walk Through Windows of Current Application=Alt+`
-Walk Through Windows of Current Application (Reverse)=Alt+~
+Walk Through Windows of Current Application=Meta+Tab
+Walk Through Windows of Current Application (Reverse)=Meta+Shift+Tab
 Walk Through Windows of Current Application Alternative=none
 Walk Through Windows of Current Application Alternative (Reverse)=none
 Window Above Other Windows=none
@@ -299,6 +311,7 @@ Window to Desktop 9=none
 Window to Next Desktop=none
 Window to Next Screen=none
 Window to Previous Desktop=none
+Window to Previous Screen=none
 Window to Screen 0=none
 Window to Screen 1=none
 Window to Screen 2=none
@@ -313,13 +326,21 @@ view_zoom_in=Meta+=
 view_zoom_out=Meta+-
 
 [plasma-desktop][Global Shortcuts]
-Next Activity=Meta+Tab
-Previous Activity=Meta+Shift+Tab
+Next Activity=none
+Previous Activity=none
 Show Dashboard=Ctrl+F12
 Stop Activity=Meta+S
 SystemTray-Klipper-6=none
 Systemtray-Klipper-6=Ctrl+Alt+V
-manage activities=Meta+Q
+activate widget 119=none
+activate widget 120=none
+activate widget 121=none
+activate widget 9=none
+activate widget 98=none
+manage activities=none
 
 [plasma-netbook][Global Shortcuts]
 Systemtray-Klipper-4=none
+
+[yakuake][Global Shortcuts]
+toggle-window-state=Meta+Q
