@@ -4,7 +4,6 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux -2
 
 # aliases
 alias ls='ls -hp --color=auto'
@@ -33,9 +32,6 @@ source /usr/bin/virtualenvwrapper.sh
 alias gccaf="gcc -ansi -pedantic -Wall"
 alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
 alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
-
-# tmux
-alias tmux="tmux -2" #force tmux to use 256 colors
 
 # exports
 export EDITOR="/usr/bin/vim"
