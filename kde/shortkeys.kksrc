@@ -332,11 +332,6 @@ Show Dashboard=Ctrl+F12
 Stop Activity=Meta+S
 SystemTray-Klipper-6=none
 Systemtray-Klipper-6=Ctrl+Alt+V
-activate widget 119=none
-activate widget 120=none
-activate widget 121=none
-activate widget 9=none
-activate widget 98=none
 manage activities=none
 
 [plasma-netbook][Global Shortcuts]
