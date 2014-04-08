@@ -24,10 +24,10 @@ fi
 
 # select prompts based on user
 if [ `whoami` != "root" ]; then
-    line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$git_prompt$cyn─$blu> $cyn\w"
+    line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$blu> $cyn\w $git_prompt"
     line2="\n$cyn└─$blu> $rst"
 else
-    line1="\n$cyn┌─$red> \u $blu@ $cyn\h $red<$cyn─$git_prompt$cyn─$red> $cyn\w"
+    line1="\n$cyn┌─$red> \u $blu@ $cyn\h $red<$cyn─$red> $cyn\w $git_prompt"
     line2="\n$cyn└─$red> $rst"
 fi
 
