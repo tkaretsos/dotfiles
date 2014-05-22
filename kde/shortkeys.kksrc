@@ -66,7 +66,9 @@ display=Display
 [khotkeys][Global Shortcuts]
 {3f12d619-6efb-447f-8457-12eb493f47d0}=Meta+F9
 {697c0f08-e18b-4047-af30-5556907d7c58}=Meta+W
+{a38954e4-642a-44f3-a671-2aa84c2d7d86}=Meta+Shift+N
 {b7693c78-46ea-4f51-b7ae-ee3bfbb2cb79}=Meta+Esc
+{b841c8e9-4893-4c8b-85ba-1ae1c4d086ca}=Meta+Shift+P
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search
 {dda17ce2-23b1-42b3-ae88-efcf4d2a8296}=Print
 {e3be82b6-2f29-4e22-9c16-a7f30a94529f}=Meta+D
@@ -136,6 +138,7 @@ Run Command=Meta+R
 Run Command on clipboard contents=Alt+Shift+F2
 Show System Activity=Ctrl+Esc
 Switch User=Ctrl+Alt+Ins
+baloosearch=none
 bookmarks=none
 desktopsessions=none
 kdevelopsessions=none
@@ -161,7 +164,7 @@ Log Out Without Confirmation=Ctrl+Alt+Shift+Del
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
 
 [ktorrent][Global Shortcuts]
-queue_suspend=Alt+Shift+P
+queue_suspend=none
 show_kt=Alt+Shift+T
 
 [kwin][Global Shortcuts]
@@ -188,12 +191,19 @@ MoveZoomLeft=Meta+Left
 MoveZoomRight=Meta+Right
 MoveZoomUp=Meta+Up
 Next Layout=Meta+PgDown
+Next Tiling Layout=none
 Previous Layout=Meta+PgUp
+Previous Tiling Layout=none
 Remove Window From Group=none
+Resize Active Window To The Bottom=Meta+Alt+J
+Resize Active Window To The Left=Meta+Alt+H
+Resize Active Window To The Right=Meta+Alt+L
+Resize Active Window To The Top=Meta+Alt+K
 Setup Window Shortcut=none
 Show Desktop=Meta+V
 ShowDesktopGrid=Ctrl+F8
 Suspend Compositing=Alt+Shift+F12
+Swap Window With Master=Meta+Shift+M
 Switch Focus Down=Meta+J
 Switch Focus Left=Meta+H
 Switch Focus Right=Meta+L
@@ -238,7 +248,10 @@ Switch to Screen 4=none
 Switch to Screen 5=none
 Switch to Screen 6=none
 Switch to Screen 7=none
+Toggle Border=Meta+U
+Toggle Border for all=Meta+Shift+U
 Toggle Floating=Meta+F
+Toggle Tiling=none
 Toggle Window Raise/Lower=none
 Walk Through Desktop List=none
 Walk Through Desktop List (Reverse)=none
@@ -329,9 +342,13 @@ view_zoom_out=Meta+-
 Next Activity=none
 Previous Activity=none
 Show Dashboard=Ctrl+F12
-Stop Activity=Meta+S
+Stop Activity=none
 SystemTray-Klipper-6=none
 Systemtray-Klipper-6=Ctrl+Alt+V
+activate widget 155=none
+activate widget 156=none
+activate widget 157=none
+activate widget 158=none
 manage activities=none
 
 [plasma-netbook][Global Shortcuts]

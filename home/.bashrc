@@ -36,6 +36,7 @@ alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
 # exports
 export EDITOR="/usr/bin/vim"
 export PATH=$PATH:/home/`whoami`/Documents/util_scripts
+export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # set the prompt
 if [ -f $HOME/.git-prompt.sh ]; then
