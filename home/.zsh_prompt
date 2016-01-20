@@ -1,0 +1,63 @@
+#
+# ~/.zsh_prompt
+#
+# layout:
+#
+#   ┌─> username @ hostname <─> working dir <─> git prompt
+#   └─>
+#
+
+if [[ -a /usr/share/git/completion/git-prompt.sh ]]; then
+  source /usr/share/git/completion/git-prompt.sh
+
+  export GIT_PS1_SHOWDIRTYSTATE="auto"
+  export GIT_PS1_SHOWSTASHSTATE="auto"
+  export GIT_PS1_SHOWUNTRACKEDFILES="auto"
+  export GIT_PS1_SHOWUPSTREAM="auto"
+fi
+
+autoload -U colors && colors
+
+setopt promptsubst
+setopt promptpercent
+
+function get_user() {
+  if [[ `whoami` == "root" ]]; then
+    echo "%F{red}%n"
+  else
+    echo "%F{green}%n"
+  fi
+}
+
+function get_host() {
+  echo "%F{cyan}%m"
+}
+
+function get_pwd() {
+  echo "%F{yellow}%~"
+}
+
+function l_arrow() {
+  echo "%F{blue}<"
+}
+
+function r_arrow() {
+  echo "%F{blue}>"
+}
+
+function separator {
+  echo "$(l_arrow)%F{cyan}─$(r_arrow)"
+}
+
+function git_prompt {
+  if [[ -d $(git rev-parse --show-toplevel 2>/dev/null) ]]; then
+    echo "$(separator) $(__git_ps1 "\e[1;35m%s")"
+  else
+    echo ""
+  fi
+}
+
+PROMPT='
+%F{cyan}┌─$(r_arrow) $(get_user) %F{blue}@ $(get_host) $(separator) $(get_pwd) $(git_prompt)
+%F{cyan}└─$(r_arrow)%f '
+
