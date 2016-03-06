@@ -23,37 +23,38 @@ setopt promptpercent
 
 function get_user() {
   if [[ `whoami` == "root" ]]; then
-    echo "%F{red}%n"
+    echo -n "%F{red}%n"
   else
-    echo "%F{green}%n"
+    echo -n "%F{green}%n"
   fi
+  echo -n "$reset_color"
 }
 
 function get_host() {
-  echo "%F{cyan}%m"
+  echo -n "%F{cyan}%m$reset_color"
 }
 
 function get_pwd() {
-  echo "%F{yellow}%~"
+  echo -n "%F{yellow}%~$reset_color"
 }
 
 function l_arrow() {
-  echo "%F{blue}<"
+  echo -n "%F{blue}<$reset_color"
 }
 
 function r_arrow() {
-  echo "%F{blue}>"
+  echo -n "%F{blue}>$reset_color"
 }
 
 function separator {
-  echo "$(l_arrow)%F{cyan}─$(r_arrow)"
+  echo -n "$(l_arrow)%F{cyan}─$(r_arrow)$reset_color"
 }
 
 function git_prompt {
   if [[ -d $(git rev-parse --show-toplevel 2>/dev/null) ]]; then
-    echo "$(separator) $(__git_ps1 "\e[1;35m%s")"
+    echo -n "$(separator) $(__git_ps1 "\e[1;35m%s")$reset_color"
   else
-    echo ""
+    echo -n ""
   fi
 }
 
