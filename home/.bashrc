@@ -18,25 +18,19 @@ alias cower="cower --target=/tmp/ --color='auto'"
 alias mysql_start="sudo systemctl start mysqld"
 alias mysql_stop="sudo systemctl stop mysqld"
 
-## LiU related stuff
-alias ida_mount="sshfs -o idmap=user ida:/home/thaka527 ~/astmatix"
-alias ida_unmount="fusermount -u ~/astmatix"
-alias isy_mount="sshfs -o idmap=user isy:/edu/thaka527 ~/southfork"
-alias isy_unmount="fusermount -u ~/southfork"
-
 # virtualenv wrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/.virtualenvs
+#source /usr/bin/virtualenvwrapper.sh
 
 ## GCC
-alias gccaf="gcc -ansi -pedantic -Wall"
-alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
-alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
+#alias gccaf="gcc -ansi -pedantic -Wall"
+#alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
+#alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
 
 # exports
 export EDITOR="/usr/bin/vim"
-export PATH=$PATH:/home/`whoami`/Documents/util_scripts
-export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+#export PATH=$PATH:/home/`whoami`/Documents/util_scripts
+#export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # set the prompt
 if [ -f $HOME/.git-prompt.sh ]; then
