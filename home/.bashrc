@@ -12,6 +12,8 @@ alias ll='ls -l'
 alias la='ls -lA'
 alias grep='grep --color=auto'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias ping='ping -c 3'
 alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
 alias cower="cower --target=/tmp/ --color='auto'"
