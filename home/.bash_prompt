@@ -9,12 +9,13 @@
 
 # colors
 rst='\[\e[0m\]'    # Text Reset
-blu='\[\e[0;34m\]' # Blue
+blu='\[\e[0;94m\]' # Blue
 cyn='\[\e[0;36m\]' # Cyan
 red='\[\e[0;31m\]' # Red
 grn='\[\e[0;32m\]' # Green
+gry='\[\e[0;37m\]' # Grey
 #ylw='\[\e[0;33m\]' # Yellow
-#mag='\[\e[0;35m\]' # Magenta
+mag='\[\e[0;35m\]' # Magenta
 
 if [[ `type -t __git_ps1` == "function" ]]; then
     git_prompt='$(__git_ps1 "\[\e[0;34m\]( \[\e[1;35m\]%s \[\e[0;34m\])")'
@@ -24,10 +25,10 @@ fi
 
 # select prompts based on user
 if [ `whoami` != "root" ]; then
-    line1="\n$cyn┌─$blu> $grn\u $blu@ $cyn\h $blu<$cyn─$blu> $cyn\w $git_prompt"
+    line1="\n$cyn┌─$blu> $grn\u $blu@ $mag\h $blu<$cyn─$blu> $cyn\w $git_prompt"
     line2="\n$cyn└─$blu>$rst "
 else
-    line1="\n$cyn┌─$red> \u $blu@ $cyn\h $red<$cyn─$red> $cyn\w $git_prompt"
+    line1="\n$cyn┌─$red> \u $blu@ $mag\h $red<$cyn─$red> $cyn\w $git_prompt"
     line2="\n$cyn└─$red>$rst "
 fi
 
@@ -38,6 +39,8 @@ unset blu
 unset cyn
 unset red
 unset grn
+unset gry
+unset mag
 unset git_prompt
 unset line1
 unset line2
