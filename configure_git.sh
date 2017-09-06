@@ -16,6 +16,8 @@ configs=("color.ui auto"
          "alias.ff \"diff --ignore-all-space\""
          "alias.cav \"commit --all --verbose\""
          "alias.cam \"commit --all -m\""
+         "alias.log1 \"log --oneline\""
+         "alias.rmdiff \"checkout -- .\""
         )
 
 eval $cmd "--remove-section color"
