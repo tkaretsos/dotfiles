@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # aliases
-alias ls='ls -hp --color=auto'
+alias ls='ls -hp --color=auto --group-directories-first'
 alias sl='ls'
 alias ll='ls -l'
 alias la='ls -lA'
@@ -20,23 +20,14 @@ alias cower="cower --target=/tmp/ --color='auto'"
 alias mysql_start="sudo systemctl start mysqld"
 alias mysql_stop="sudo systemctl stop mysqld"
 
-# virtualenv wrapper
-#export WORKON_HOME=~/.virtualenvs
-#source /usr/bin/virtualenvwrapper.sh
-
-## GCC
-#alias gccaf="gcc -ansi -pedantic -Wall"
-#alias g++11="g++ -std=c++11 -pedantic -Wall -Wextra"
-#alias g++98="g++ -std=c++98 -pedantic -Wall -Wextra"
-
 # exports
 export EDITOR="/usr/bin/vim"
 #export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 #export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
-# set the prompt
-if [ -f $HOME/.git-prompt.sh ]; then
-    source $HOME/.git-prompt.sh
+# set the prompt  
+if [ -f /usr/share/git/git-prompt.sh ]; then
+    source /usr/share/git/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE="auto"
     export GIT_PS1_SHOWSTASHSTATE="auto"
     export GIT_PS1_SHOWUNTRACKEDFILES="auto"
@@ -50,6 +41,34 @@ else
 fi
 
 # enable bash completition when preciding:
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 complete -cf sudo
 complete -cf man
+
+colors() {
+    local fgc bgc vals seq0
+
+    printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+    printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+    printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+    printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+
+    # foreground colors
+    for fgc in {30..37}; do
+        # background colors
+        for bgc in {40..47}; do
+            fgc=${fgc#37} # white
+            bgc=${bgc#40} # black
+
+            vals="${fgc:+$fgc;}${bgc}"
+            vals=${vals%%;}
+
+            seq0="${vals:+\e[${vals}m}"
+            printf "  %-9s" "${seq0:-(default)}"
+            printf " ${seq0}TEXT\e[m"
+            printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+        done
+        echo; echo
+    done
+}
 
