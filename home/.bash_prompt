@@ -18,7 +18,7 @@ gry='\[\e[0;37m\]' # Grey
 mag='\[\e[0;35m\]' # Magenta
 
 if [[ `type -t __git_ps1` == "function" ]]; then
-    git_prompt='$(__git_ps1 "\[\e[0;94m\]( \[\e[1;35m\]%s \[\e[0;94m\])")'
+    git_prompt='$(__git_ps1 "\[\e[0;94m\]( \[\e[0;33m\]%s \[\e[0;94m\])")'
 else
     git_prompt=""
 fi
