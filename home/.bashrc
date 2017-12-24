@@ -15,15 +15,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ping='ping -c 3'
-#alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
-#alias cower="cower --target=/tmp/ --color='auto'"
-#alias mysql_start="sudo systemctl start mysqld"
-#alias mysql_stop="sudo systemctl stop mysqld"
+alias pss='ps aux'
 
 # exports
 export EDITOR="/usr/bin/vim"
-#export PATH=$PATH:/home/`whoami`/Documents/util_scripts
-#export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # set the prompt
 if [ -f ~/.git-prompt.sh ]; then
@@ -31,7 +26,7 @@ if [ -f ~/.git-prompt.sh ]; then
     export GIT_PS1_SHOWDIRTYSTATE="auto"
     export GIT_PS1_SHOWSTASHSTATE="auto"
     export GIT_PS1_SHOWUNTRACKEDFILES="auto"
-    export GIT_PS1_SHOWUPSTREAM="auto"
+    export GIT_PS1_SHOWUPSTREAM="auto verbose legacy"
 fi
 
 if [ -f $HOME/.bash_prompt ]; then
@@ -41,7 +36,7 @@ else
 fi
 
 # enable bash completition when preciding:
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 complete -cf sudo
 complete -cf man
 
@@ -72,8 +67,8 @@ colors() {
     done
 }
 
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 if [ -d $HOME/.rvm/bin ]; then
     export PATH="$PATH:$HOME/.rvm/bin"
 fi
+
