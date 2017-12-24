@@ -15,17 +15,17 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ping='ping -c 3'
-alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
-alias cower="cower --target=/tmp/ --color='auto'"
-alias mysql_start="sudo systemctl start mysqld"
-alias mysql_stop="sudo systemctl stop mysqld"
+#alias wifi-clear='sudo rm /var/lib/dhcpcd/*'
+#alias cower="cower --target=/tmp/ --color='auto'"
+#alias mysql_start="sudo systemctl start mysqld"
+#alias mysql_stop="sudo systemctl stop mysqld"
 
 # exports
 export EDITOR="/usr/bin/vim"
 #export PATH=$PATH:/home/`whoami`/Documents/util_scripts
 #export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
-# set the prompt  
+# set the prompt
 if [ -f /usr/share/git/git-prompt.sh ]; then
     source /usr/share/git/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE="auto"
