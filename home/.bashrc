@@ -26,8 +26,8 @@ export EDITOR="/usr/bin/vim"
 #export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # set the prompt
-if [ -f /usr/share/git/git-prompt.sh ]; then
-    source /usr/share/git/git-prompt.sh
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE="auto"
     export GIT_PS1_SHOWSTASHSTATE="auto"
     export GIT_PS1_SHOWUNTRACKEDFILES="auto"
