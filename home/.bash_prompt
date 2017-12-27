@@ -26,7 +26,7 @@ BWHT="\[\e[1;37m\]"
 function set_git_prompt {
 
     if [[ `type -t __git_ps1` == "function" ]]; then
-        git_prompt="${MAG}$(__git_ps1 "[%s]")${RST}"
+        git_prompt="${BYLW}$(__git_ps1 "[%s]")${RST}"
     else
         git_prompt=""
     fi
