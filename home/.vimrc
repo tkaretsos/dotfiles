@@ -20,6 +20,9 @@ set autoindent
 set smartindent
 set list listchars=tab:→\ ,trail:·
 
+" Ruby spacing
+autocmd Filetype ruby setlocal tabstop=2 softtabsetop=2 shiftwidth=2
+
 " colors
 set t_Co=256
 colorscheme jellybeans
