@@ -21,7 +21,7 @@ set smartindent
 set list listchars=tab:→\ ,trail:·
 
 " Ruby spacing
-autocmd Filetype ruby setlocal tabstop=2 softtabsetop=2 shiftwidth=2
+autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " colors
 set t_Co=256
