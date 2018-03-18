@@ -16,6 +16,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ping='ping -c 3'
 alias pss='ps aux'
+alias pacaur='pacaur --aur'
 
 # exports
 export EDITOR="/usr/bin/vim"
