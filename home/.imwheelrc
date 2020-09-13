@@ -1,0 +1,34 @@
+# xprop WM_CLASS | grep -o '"[^"]*"' | head -n 1
+
+"^chromium$"
+    None, Up, Button4, 3
+    None, Down, Button5, 3
+    Shift_L,   Up,   Shift_L|Button4, 3
+    Shift_L,   Down, Shift_L|Button5, 3
+    Control_L, Up,   Control_L|Button4
+    Control_L, Down, Control_L|Button5
+
+"^slack$"
+    None, Up, Button4, 2
+    None, Down, Button5, 2
+    Shift_L,   Up,   Shift_L|Button4, 2
+    Shift_L,   Down, Shift_L|Button5, 2
+    Control_L, Up,   Control_L|Button4
+    Control_L, Down, Control_L|Button5
+
+"^Mail$"
+    None, Up, Button4, 2
+    None, Down, Button5, 2
+    Shift_L,   Up,   Shift_L|Button4, 2
+    Shift_L,   Down, Shift_L|Button5, 2
+    Control_L, Up,   Control_L|Button4
+    Control_L, Down, Control_L|Button5
+
+"^Navigator$"
+    None, Up, Button4, 3
+    None, Down, Button5, 3
+    Shift_L,   Up,   Shift_L|Button4, 3
+    Shift_L,   Down, Shift_L|Button5, 3
+    Control_L, Up,   Control_L|Button4
+    Control_L, Down, Control_L|Button5
+
