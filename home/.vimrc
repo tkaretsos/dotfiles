@@ -1,11 +1,11 @@
 "
 " ~/.vimrc
 "
+syntax enable
 set encoding=utf-8
 set nocompatible
 set showmatch
 set incsearch
-syntax enable
 set history=100
 set backspace=eol,start,indent
 set ruler
@@ -20,9 +20,6 @@ set autoindent
 set smartindent
 set list listchars=tab:→\ ,trail:·
 
-" Ruby spacing
-autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-
 " colors
 set t_Co=256
 colorscheme jellybeans
@@ -30,11 +27,13 @@ colorscheme jellybeans
 " plugins
 filetype plugin on
 
+autocmd BufRead,BufNewFile *.go set noexpandtab
+autocmd BufRead,BufNewFile *.yml set tabstop=2 shiftwidth=2 softtabstop=2
+
 " highlight after 80 column
-highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
-au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
+" au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw match OverLength /\%81v.\+/
 
 " move current line up or down
 nnoremap <C-Up>   ddkP
 nnoremap <C-Down> ddp
-
