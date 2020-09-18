@@ -1,0 +1,10 @@
+[Unit]
+Description=Control NZXT LED lights
+After=liquidcfg_init.service
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl set led color off
+
+[Install]
+WantedBy=default.target

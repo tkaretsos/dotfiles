@@ -1,0 +1,9 @@
+[Unit]
+Description=Initialize liquidctl
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl initialize all
+
+[Install]
+WantedBy=default.target
