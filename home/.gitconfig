@@ -6,3 +6,6 @@
 	st = status
 	ff = diff --ignore-all-space
 	log1 = log --oneline
+	hardreset = reset HEAD --hard
+[push]
+	followTags = true
