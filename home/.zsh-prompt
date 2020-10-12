@@ -44,6 +44,13 @@ parse_git_state() {
   if ! git diff --cached --quiet 2> /dev/null; then
     GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
   fi
+  if [ "$(git stash list 2>/dev/null)" != "" ]; then
+    if [ -z $GIT_STATE ]; then
+      GIT_STATE="%{$fg[red]%}$%{$reset_color%}"
+    else
+      GIT_STATE="%{$fg[red]%}$%{$reset_color%} $GIT_STATE"
+    fi
+  fi
   if [[ -n $GIT_STATE ]]; then
     echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
   fi
