@@ -7,5 +7,6 @@
 	ff = diff --ignore-all-space
 	log1 = log --oneline
 	hardreset = reset HEAD --hard
+	uncommit = reset HEAD~1 --soft
 [push]
 	followTags = true
