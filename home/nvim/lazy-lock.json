@@ -1,6 +1,7 @@
 {
+  "elixir-tools.nvim": { "branch": "main", "commit": "4b3c1c23a83361559676981575083436cf9b7245" },
   "gitsigns.nvim": { "branch": "main", "commit": "e2ca739be75447fb5ccc9bfeb64f7afbc2cee5e6" },
-  "lazy.nvim": { "branch": "main", "commit": "59335c5b9d116f5d3948f833288a89e2a829a005" },
+  "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
   "lazygit.nvim": { "branch": "main", "commit": "de35012036d43bca03628d40d083f7c02a4cda3f" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "dfdd771b792fbb4bad8e057d72558255695aa1a7" },
   "mason.nvim": { "branch": "main", "commit": "ee6a7f179ebf8aa9da9d53b1cf1b57d292ea0182" },

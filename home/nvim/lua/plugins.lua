@@ -12,12 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- Theme
   {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
   },
+
+  -- Utilities
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -31,6 +34,8 @@ local plugins = {
       -- refer to the configuration section below
     }
   },
+
+  -- Code
   'nvim-treesitter/nvim-treesitter',
   {
     'nvim-telescope/telescope.nvim',
@@ -40,13 +45,42 @@ local plugins = {
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
+  --  {
+  --    "elixir-tools/elixir-tools.nvim",
+  --    version = "*",
+  --    event = { "BufReadPre", "BufNewFile" },
+  --    dependencies = {
+  --      "nvim-lua/plenary.nvim",
+  --    },
+  --    config = function()
+  --      local elixir = require("elixir")
+  --      local elixirls = require("elixir.elixirls")
+  --
+  --      elixir.setup {
+  --        nextls = { enable = true },
+  --        credo = {},
+  --        elixirls = {
+  --          enable = true,
+  --          settings = elixirls.settings {
+  --            dialyzerEnabled = false,
+  --            enableTestLenses = false,
+  --          },
+  --          on_attach = function()
+  --            vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+  --            vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+  --            vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+  --          end,
+  --        }
+  --      }
+  --    end,
+  --  },
+
+  -- Git
   "lewis6991/gitsigns.nvim",
   {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
+    dependencies = { "nvim-lua/plenary.nvim" }
   },
 }
 
@@ -54,4 +88,3 @@ local opts = {}
 
 require("lazy").setup(plugins, opts)
 require("plugin_config")
-

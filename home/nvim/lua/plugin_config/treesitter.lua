@@ -23,6 +23,9 @@ require('nvim-treesitter.configs').setup {
   auto_install = true,
   highlight = {
     enable = true,
+    disable = function(_, _)
+      local filename = vim.fn.expand("%:t")
+      return filename == "default.po" or filename == "default.pot"
+    end,
   },
 }
-

@@ -11,8 +11,6 @@ require('which-key').register({
       name = "+diagnostic",
       f = "open float",
       l = "location list",
-      n = "next",
-      p = "previous"
     },
     c = {
       name = "+code",
@@ -23,6 +21,7 @@ require('which-key').register({
       h = "hover",
       H = "show signature help",
       a = "code action",
+      f = "format",
     },
     g = {
       name = "+git",
@@ -33,10 +32,19 @@ require('which-key').register({
       S = "stage buffer",
       R = "reset buffer",
       b = "blame line",
+      B = "toggle current line blame",
       d = "diff",
       D = "diff ~",
       g = {"<cmd>LazyGit<cr>", "Open LazyGit"}
     }
+  },
+  ["["] = {
+    h = "Previous hunk",
+    d = "Previous diagnostic",
+  },
+  ["]"] = {
+    h = "Next hunk",
+    d = "Next diagnostic",
   }
 })
 
