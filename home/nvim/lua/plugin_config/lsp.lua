@@ -19,9 +19,34 @@ lspconfig.lua_ls.setup({
   },
 })
 
-lspconfig.elixirls.setup{}
-lspconfig.erlangls.setup{}
-lspconfig.gopls.setup{}
+-- lspconfig.elixirls.setup{}
+lspconfig.erlangls.setup {}
+lspconfig.gopls.setup {}
+
+-- elixir-tools.nvim setup
+require("elixir").setup({
+  nextls = { enable = false },
+  credo = { enable = false },
+  elixirls = {
+    -- alternatively, point to an existing elixir-ls installation (optional)
+    -- not currently supported by elixirls, but can be a table if you wish to pass other args `{"path/to/elixirls", "--foo"}`
+    -- the directory of the executable must be in $PATH
+    cmd = "language_server.sh",
+
+    -- default settings, use the `settings` function to override settings
+    settings = require("elixir.elixirls").settings {
+      dialyzerEnabled = true,
+      fetchDeps = false,
+      enableTestLenses = true,
+      suggestSpecs = false,
+    },
+    -- on_attach = function()
+    --   vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+    --   vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+    --   vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+    -- end
+  }
+})
 
 vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist)
@@ -42,13 +67,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', '<leader>cr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, opts)
-    vim.keymap.set('n', '<leader>cH', vim.lsp.buf.hover, opts)
-    vim.keymap.set('n', '<leader>ch', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', '<leader>cf', function()
       vim.lsp.buf.format { async = true }
     end, opts)
+    vim.keymap.set('n', '<leader>ct', vim.lsp.codelens.run, opts)
+
+    vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', '<leader>cH', vim.lsp.buf.signature_help, opts)
     -- vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
     -- vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
     -- vim.keymap.set('n', '<leader>wl', function()
