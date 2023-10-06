@@ -34,6 +34,10 @@ local plugins = {
       -- refer to the configuration section below
     }
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons", opt = true }
+  },
 
   -- Code
   'nvim-treesitter/nvim-treesitter',
