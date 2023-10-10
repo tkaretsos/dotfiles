@@ -25,8 +25,8 @@ require('lualine').setup {
     lualine_y = {
       {
         'filetype',
-        icon_only = true,
-        icon = { align = 'right' },
+        -- icon_only = true,
+        -- icon = { align = 'right' },
       }
     },
     lualine_z = { 'location' }
