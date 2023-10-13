@@ -64,6 +64,10 @@ local plugins = {
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
+  {
+    'numToStr/Comment.nvim',
+    lazy = false,
+  },
 
   -- Git
   "lewis6991/gitsigns.nvim",

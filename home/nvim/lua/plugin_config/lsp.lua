@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>cf', function()
       vim.lsp.buf.format { async = true }
     end, opts)
-    vim.keymap.set('n', '<leader>ct', vim.lsp.codelens.run, opts)
+    vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, opts)
 
     vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', '<leader>cH', vim.lsp.buf.signature_help, opts)

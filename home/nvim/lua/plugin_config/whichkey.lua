@@ -3,7 +3,7 @@ require('which-key').register({
     f = {
       name = "+telescope",
       f = {"<cmd>Telescope find_files<cr>", "find file"},
-      o = {"<cmd>Telescope oldfiles<cr>", "search history"},
+      b = {"<cmd>Telescope buffers<cr>", "buffers"},
       g = {"<cmd>Telescope live_grep<cr>", "grep files"},
       h = {"<cmd>Telescope help_tags<cr>", "search help tags"},
     },
@@ -22,6 +22,7 @@ require('which-key').register({
       H = "show signature help",
       a = "code action",
       f = "format",
+      l = "lens",
     },
     g = {
       name = "+git",
