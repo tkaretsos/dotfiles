@@ -7,6 +7,7 @@ require('nvim-treesitter.configs').setup {
     "eex",
     "html",
     "css",
+    "javascript",
     "sql",
     "json",
     "xml",
