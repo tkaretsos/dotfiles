@@ -6,6 +6,7 @@ require('which-key').register({
       b = {"<cmd>Telescope buffers<cr>", "buffers"},
       g = {"<cmd>Telescope live_grep<cr>", "grep files"},
       h = {"<cmd>Telescope help_tags<cr>", "search help tags"},
+      s = {"<cmd>Telescope grep_string<cr>", "search string"},
     },
     d = {
       name = "+diagnostic",
