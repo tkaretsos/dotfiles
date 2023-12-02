@@ -29,11 +29,3 @@ filetype plugin on
 
 autocmd BufRead,BufNewFile *.go set noexpandtab
 autocmd BufRead,BufNewFile *.yml set tabstop=2 shiftwidth=2 softtabstop=2
-
-" highlight after 80 column
-" highlight OverLength ctermbg=lightred ctermfg=black guibg=#FFD9D9
-" au BufRead,BufNewFile *.c,*.cpp,*.cc,*.h,*.hh,*.py,*.pyw match OverLength /\%81v.\+/
-
-" move current line up or down
-nnoremap <C-Up>   ddkP
-nnoremap <C-Down> ddp
