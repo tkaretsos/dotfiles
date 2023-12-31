@@ -112,9 +112,6 @@ export EDITOR=$(which vim)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --color=auto -hp --group-directories-first'
-alias sl='ls'
-alias ping='ping -c 4'
-alias pss='ps aux'
 alias cp='cp -i'
 alias df='df -h'
 alias free='free -m'
