@@ -39,6 +39,7 @@ require("elixir").setup({
       fetchDeps = false,
       enableTestLenses = true,
       suggestSpecs = false,
+      autoInsertRequiredAlias = false,
     },
     -- on_attach = function()
     --   vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
