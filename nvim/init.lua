@@ -6,6 +6,9 @@ vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmatch = true
+vim.opt.hidden = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- use spaces for tabs and whatnot
 vim.opt.tabstop = 2
