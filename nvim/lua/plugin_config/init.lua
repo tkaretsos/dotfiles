@@ -6,4 +6,4 @@ require("plugin_config.git")
 require("plugin_config.lualine")
 require("plugin_config.comment")
 require("plugin_config.whichkey")
-
+require("plugin_config.obsidian")
