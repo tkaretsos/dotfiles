@@ -22,6 +22,9 @@ vim.opt.shiftround = true
 vim.opt.list = true
 vim.opt.listchars = "tab:→ ,trail:·"
 
+-- https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
+vim.opt.conceallevel = 1
+
 -- delete trailing spaces on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
