@@ -4,9 +4,6 @@
   co = checkout
   br = branch
   st = status
-  ff = diff --ignore-all-space
-  log1 = log --oneline
-  hardreset = reset HEAD --hard
-  uncommit = reset HEAD~1 --soft
+  log1 = log --graph --oneline
 [push]
   followTags = true
