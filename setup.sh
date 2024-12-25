@@ -39,6 +39,8 @@ if ! [ -x "$(command -v ulauncher)" ]; then
   sudo add-apt-repository -y ppa:agornostal/ulauncher
   sudo apt update
   sudo apt-get -y install ulauncher
+  rm $HOME/.config/ulauncher/settings.json
+  ln -s $CODE_DIR/dotfiles/.config/ulauncher/settings.json $HOME/.config/ulauncher/settings.json
 else
   echo "ulauncher already installed"
 fi
