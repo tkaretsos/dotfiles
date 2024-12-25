@@ -7,6 +7,7 @@ set history=100
 set backspace=eol,start,indent
 set ruler
 set number
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
