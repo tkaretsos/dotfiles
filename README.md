@@ -5,3 +5,4 @@
    ```
    ssh-keygen -t ed25519 -a 100 -f ~/.ssh/github -q -N ''
    ```
+- Add the key to GitHub's coniguration
