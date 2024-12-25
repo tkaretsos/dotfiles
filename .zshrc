@@ -99,6 +99,15 @@ source $ZSH/oh-my-zsh.sh
 # fi
 export EDITOR=$(which vim)
 
+# Enable history between iex sessions
+export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
+
+unset LESS
+
+if [ -f "$HOME/.secrets" ]; then
+  source "$HOME/.secrets"
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -112,19 +121,7 @@ export EDITOR=$(which vim)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --color=auto -hp --group-directories-first'
 alias cp='cp -i'
-alias df='df -h'
-alias free='free -m'
 
-if [ -f "$HOME/.secrets" ]; then
-  source "$HOME/.secrets"
+if [ -x "$(command -v nvim)" ]; then
+  alias n='nvim'
 fi
-
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.local/share/nvim/mason/packages/elixir-ls
-
-# Enable history between iex sessions
-export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
-
-unset LESS
-
