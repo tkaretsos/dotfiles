@@ -34,14 +34,14 @@ else
   echo "asdf already installed"
 fi
 
-# Install neovim
-if ! [ -x "$(command -v nvim)" ]; then
-  echo "Installing neovim..."
-  asdf plugin add neovim
-  asdf install neovim stable
-  asdf global neovim stable
+# Install npm
+if ! [ -x "$(command -v npm)" ]; then
+  echo "Installing NodeJS..."
+  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf install nodejs latest
+  asdf global nodejs latest
 else
-  echo "neovim already installed"
+  echo "NodeJS already installed"
 fi
 
 # Install Nerd font
