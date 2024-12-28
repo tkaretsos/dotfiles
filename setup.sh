@@ -8,7 +8,7 @@ DOTFILES=$HOME/Code/dotfiles
 
 # Install utilities
 echo "Installing apt packages..."
-sudo apt-get -y install build-essential git curl zsh vim jq ripgrep fzf fd-find neovim
+sudo apt-get -y install build-essential git curl zsh vim jq ripgrep fzf fd-find
 
 # Clone dotfiles
 if ! [ -d $DOTFILES ]; then
@@ -30,6 +30,16 @@ if ! [ -d $HOME/.asdf ]; then
   fi
 else
   echo "asdf already installed"
+fi
+
+# Install neovim
+if ! [ -x "$(command -v nvim)" ]; then
+  echo "Installing neovim..."
+  asdf plugin add neovim
+  asdf install neovim stable
+  asdf global neovim stable
+else
+  echo "neovim already installed..."
 fi
 
 # Install npm
