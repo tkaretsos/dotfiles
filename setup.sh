@@ -5,10 +5,11 @@
 set -e
 mkdir -p $HOME/Code
 DOTFILES=$HOME/Code/dotfiles
+MISE=$HOME/.local/bin/mise
 
 # Install utilities
 echo "Installing apt packages..."
-sudo apt-get -y install build-essential git curl zsh vim jq ripgrep fzf fd-find
+sudo apt-get -y install build-essential curl wget gpg git zsh vim jq ripgrep fzf fd-find
 
 # Clone dotfiles
 if ! [ -d $DOTFILES ]; then
@@ -20,81 +21,23 @@ if ! [ -d $DOTFILES ]; then
   cp $DOTFILES/.gitconfig $HOME
 fi
 
-# Install asdf
-if ! [ -d $HOME/.asdf ]; then
-  echo "Installing asdf..."
-  ASDF_VERSION=$(curl -s "https://api.github.com/repos/asdf-vm/asdf/tags" | jq -r '.[0].name')
-  git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch $ASDF_VERSION
-  if [ -f $DOTFILES/.tool-versions ]; then
-    cp $DOTFILES/.tool-versions $HOME
-  fi
+if ! [ -f $MISE ]; then
+  echo "installing mise..."
+  curl https://mise.jdx.dev/mise-latest-linux-x64 > $MISE
+  chmod +x $MISE
+  # enable autocompletion
+  $MISE use -g usage
+  mkdir -p /usr/local/share/zsh/site-functions
+  $MISE completion zsh | sudo tee /usr/local/share/zsh/site-functions/_mise &>/dev/null
 else
-  echo "asdf already installed"
+  echo "mise already installed..."
 fi
 
-# Install neovim
 if ! [ -x "$(command -v nvim)" ]; then
-  echo "Installing neovim..."
-  asdf plugin add neovim
-  asdf install neovim stable
-  asdf global neovim stable
+  echo "installing neovim..."
+  $MISE use -g neovim
 else
   echo "neovim already installed..."
-fi
-
-# Install npm
-if ! [ -x "$(command -v npm)" ]; then
-  echo "Installing NodeJS..."
-  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  asdf install nodejs latest
-  asdf global nodejs latest
-else
-  echo "NodeJS already installed"
-fi
-
-# Install go
-if ! [ -x "$(command -v go)" ]; then
-  echo "Installing golang..."
-  asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-  asdf install golang latest
-  asdf global golang latest
-else
-  echo "golang already installed"
-fi
-
-# Install erlang asdf plugin
-if ! asdf plugin list | grep erlang &>/dev/null; then
-  echo "Installing erlang asdf plugin..."
-  # required packages for erlang
-  sudo apt install -y autoconf libssl-dev libncurses-dev
-
-  # rebar is required by Mason NeoVim plugin to install erlang-ls
-  if ! [ -x "$(command -v rebar3)"]; then
-    echo "Installing rebar3..."
-    asdf plugin add rebar https://github.com/Stratus3D/asdf-rebar.git
-    asdf install rebar latest
-    asdf global rebar latest
-  fi
-
-  asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
-  echo "Install the desired erlang/OTP version:"
-  echo "$ asdf list all erlang"
-  echo "$ asdf install erlang <version>"
-  echo "$ asdf global erlang <version>"
-else
-  echo "erlang asdf plugin already installed"
-fi
-
-# Install elixir asdf plugin
-if ! asdf plugin list | grep elixir &>/dev/null; then
-  echo "Installing elixir asdf plugin..."
-  asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
-  echo "Install the desired elixir version:"
-  echo "$ asdf list all elixir"
-  echo "$ asdf install elixir <version>"
-  echo "$ asdf global elixir <version>"
-else
-  echo "elixir asdf plugin already installed"
 fi
 
 # Install Nerd font
