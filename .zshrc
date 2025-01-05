@@ -80,7 +80,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf zsh-syntax-highlighting zsh-autosuggestions mix)
+plugins=(zsh-syntax-highlighting zsh-autosuggestions mix)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,7 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR=$(which vim)
+if [ -x "$(command -v vim)" ]; then
+  export EDITOR=$(which vim)
+else
+  export EDITOR=$(which vi)
+fi
 
 # Enable history between iex sessions
 export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
@@ -106,6 +110,10 @@ unset LESS
 
 if [ -f "$HOME/.secrets" ]; then
   source "$HOME/.secrets"
+fi
+
+if [ -f "$HOME/.local/bin/mise" ]; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
 # Compilation flags
