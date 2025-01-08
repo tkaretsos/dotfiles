@@ -44,7 +44,8 @@ fi
 if ! [ -d $HOME/.local/share/fonts/DejaVuSansMNerdFont ]; then
   echo "Installing nerd font..."
   mkdir -p $HOME/.local/share/fonts
-  wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DejaVuSansMono.zip
+  DEJAVU_VERSION=$(curl -s "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" | jq -r '.tag_name' | cut -c2-)
+  wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v${DEJAVU_VERSION}/DejaVuSansMono.zip
   unzip /tmp/DejaVuSansMono.zip -d $HOME/.local/share/fonts/DejaVuSansMNerdFont
   fc-cache -fv
 else
