@@ -133,3 +133,7 @@ alias cp='cp -i'
 if [ -x "$(command -v nvim)" ]; then
   alias n='nvim'
 fi
+
+if [ -x "$(command -v xclip)" ]; then
+  alias copy='xclip -selection clipboard'
+fi

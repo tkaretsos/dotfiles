@@ -9,7 +9,7 @@ MISE=$HOME/.local/bin/mise
 
 # Install utilities
 echo "Installing apt packages..."
-sudo apt-get -y install build-essential curl wget gpg git zsh vim jq ripgrep fzf fd-find
+sudo apt-get -y install build-essential curl wget gpg git zsh vim jq ripgrep fzf fd-find xclip
 
 # Clone dotfiles
 if ! [ -d $DOTFILES ]; then
