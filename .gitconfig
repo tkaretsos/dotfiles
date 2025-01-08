@@ -7,3 +7,5 @@
   log1 = log --graph --oneline
 [push]
   followTags = true
+[init]
+  defaultBranch = main
