@@ -63,18 +63,6 @@ else
   echo "lazygit already installed"
 fi
 
-# Install ulauncher
-if ! [ -x "$(command -v ulauncher)" ]; then
-  echo "Installing ulauncher..."
-  sudo add-apt-repository -y ppa:agornostal/ulauncher
-  sudo apt update
-  sudo apt-get -y install ulauncher
-  rm $HOME/.config/ulauncher/settings.json
-  ln -s $DOTFILES/.config/ulauncher/settings.json $HOME/.config/ulauncher/settings.json
-else
-  echo "ulauncher already installed"
-fi
-
 # Install oh-my-zsh
 if ! [ -d $HOME/.oh-my-zsh ]; then
   echo "Installing oh-my-zsh..."
