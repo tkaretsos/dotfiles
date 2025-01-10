@@ -9,7 +9,7 @@ MISE=$HOME/.local/bin/mise
 
 # Install utilities
 echo "Installing apt packages..."
-sudo apt-get -y install build-essential curl wget gpg git zsh vim jq ripgrep fzf fd-find xclip
+sudo apt-get -y install build-essential curl wget gpg git zsh vim jq ripgrep fzf fd-find xclip inotify-tools
 
 # Clone dotfiles
 if ! [ -d $DOTFILES ]; then
@@ -23,7 +23,7 @@ fi
 
 if ! [ -f $MISE ]; then
   echo "installing mise..."
-  curl https://mise.jdx.dev/mise-latest-linux-x64 > $MISE
+  curl https://mise.jdx.dev/mise-latest-linux-x64 >$MISE
   chmod +x $MISE
   # enable autocompletion
   $MISE use -g usage
@@ -36,6 +36,7 @@ fi
 if ! [ -x "$(command -v nvim)" ]; then
   echo "installing neovim..."
   $MISE use -g neovim
+  git clone git@github.com:tkaretsos/neovim-config.git $HOME/.config/nvim
 else
   echo "neovim already installed..."
 fi
