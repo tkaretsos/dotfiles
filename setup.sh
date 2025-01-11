@@ -26,7 +26,7 @@ if ! [ -f $MISE ]; then
   curl https://mise.jdx.dev/mise-latest-linux-x64 >$MISE
   chmod +x $MISE
   # enable autocompletion
-  $MISE use -g usage
+  $MISE use -yg usage
   mkdir -p /usr/local/share/zsh/site-functions
   $MISE completion zsh | sudo tee /usr/local/share/zsh/site-functions/_mise &>/dev/null
 else
@@ -35,8 +35,21 @@ fi
 
 if ! [ -x "$(command -v nvim)" ]; then
   echo "installing neovim..."
-  $MISE use -g neovim
+  $MISE use -yg neovim
   git clone git@github.com:tkaretsos/neovim-config.git $HOME/.config/nvim
+  # install LazyVim dependencies
+  # NodeJS
+  mise use -yg nodejs
+  # lua & luarocks
+  sudo apt-get -y install lua5.1 liblua5.1-dev
+  cd /tmp
+  wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+  tar zxpf /tmp/luarocks-3.11.1.tar.gz
+  cd luarocks-3.11.1
+  ./configure && make && sudo make install
+  sudo luarocks install luasocket
+  cd -
+  sudo apt-get -y install python3.12-venv
 else
   echo "neovim already installed..."
 fi
