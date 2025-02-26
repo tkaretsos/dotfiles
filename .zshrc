@@ -66,8 +66,7 @@ ZSH_THEME="steeef"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats: # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
@@ -80,9 +79,10 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-syntax-highlighting zsh-autosuggestions mix)
+plugins=(zsh-autosuggestions mix)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -103,19 +103,6 @@ else
   export EDITOR=$(which vi)
 fi
 
-# Enable history between iex sessions
-export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
-
-unset LESS
-
-if [ -f "$HOME/.secrets" ]; then
-  source "$HOME/.secrets"
-fi
-
-if [ -f "$HOME/.local/bin/mise" ]; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
-fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -129,6 +116,17 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --color=auto -hp --group-directories-first'
 alias cp='cp -i'
+alias df='df -h'
+alias free='free -m'
+alias fix_update_notification='sudo rm /var/lib/PackageKit/offline-update-competed'
+
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# autocompletion must be before oh-my-zsh initialization
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 if [ -x "$(command -v nvim)" ]; then
   alias n='nvim'
@@ -137,3 +135,15 @@ fi
 if [ -x "$(command -v xclip)" ]; then
   alias copy='xclip -selection clipboard'
 fi
+
+if [ -f "$HOME/.secrets" ]; then
+  source "$HOME/.secrets"
+fi
+
+export PATH=$PATH:$HOME/.scripts
+
+export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
+
+unset LESS
+
+source ~/.asdf/plugins/golang/set-env.zsh
