@@ -11,6 +11,9 @@ return {
           relative = "editor",
         },
       },
+      indent = {
+        enabled = false,
+      },
     },
   },
 }
