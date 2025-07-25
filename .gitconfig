@@ -1,9 +1,6 @@
 [color]
   ui = auto
 [alias]
-  co = checkout
-  br = branch
-  st = status
   log1 = log --graph --oneline
 [push]
   followTags = true
