@@ -1,0 +1,123 @@
+# ~/.config/alacritty/alacritty.yml
+#
+# Create a symlink to this file (executed from the top level repo directory):
+# $ mkdir -p ~/.config/alacritty/ && ln -s $(pwd)/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+env:
+  TERM: "xterm-256color"
+
+# Font configuration
+font:
+  # Normal font
+  normal:
+    family: "DejaVuSansM Nerd Font Mono"
+    style: Regular
+
+  # Bold font
+  bold:
+    family: "DejaVuSansM Nerd Font Mono"
+    style: Bold
+
+  # Italic font
+  italic:
+    family: "DejaVuSansM Nerd Font Mono"
+    style: Oblique
+
+  # Font size
+  size: 11.0
+
+# Colors (Tokyonight moon variant)
+colors:
+  # Default colors
+  primary:
+    background: "#222436"
+    foreground: "#c8d3f5"
+
+  # Normal colors
+  normal:
+    black: "#1b1d2b"
+    blue: "#82aaff"
+    cyan: "#86e1fc"
+    green: "#c3e88d"
+    magenta: "#c099ff"
+    red: "#ff757f"
+    white: "#828bb8"
+    yellow: "#ffc777"
+
+  # Bright colors
+  bright:
+    black: "#444a73"
+    blue: "#82aaff"
+    cyan: "#86e1fc"
+    green: "#c3e88d"
+    magenta: "#c099ff"
+    red: "#ff757f"
+    white: "#c8d3f5"
+    yellow: "#ffc777"
+
+# Window settings
+window:
+  # Window dimensions (changes require restart)
+  dimensions:
+    columns: 140
+    lines: 40
+
+  # Window padding
+  padding:
+    x: 0
+    y: 0
+
+  # Window decorations
+  decorations: full
+
+  # Startup mode
+  startup_mode: Windowed
+
+# Cursor
+cursor:
+  # Cursor style
+  style:
+    shape: Block
+    blinking: Off
+
+# Scrolling
+scrolling:
+  # Maximum number of lines in the scrollback buffer
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled
+  multiplier: 3
+
+# Bell
+bell:
+  animation: EaseOutExpo
+  duration: 0
+  color: "#ffffff"
+
+# Selection
+selection:
+  # This string contains all characters that are used as separators for "semantic words"
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard
+  save_to_clipboard: false
+
+# Live config reload
+live_config_reload: true
+
+# Shell
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: F11, mods: None, action: ToggleFullscreen }
+  # - { key: L, mods: Control, action: ClearLogNotice }
+  # - { key: L, mods: Control, chars: "\x0c" }
