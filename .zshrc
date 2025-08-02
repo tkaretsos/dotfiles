@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 if [ -f "$HOME/.secrets" ]; then
   source "$HOME/.secrets"
@@ -96,7 +96,6 @@ fi
 # export ARCHFLAGS="-arch $(uname -m)"
 export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
-export PATH="$HOME/.asdf/shims:$PATH"
 
 unset LESS
 
