@@ -1,0 +1,10 @@
+erlang 27.2
+elixir 1.18.1-otp-27
+nodejs 23.8.0
+rebar 3.24.0
+neovim 0.11.3
+lua 5.1
+golang 1.24.0
+fzf 0.64.0
+lazygit 0.53.0
+fd 10.2.0
