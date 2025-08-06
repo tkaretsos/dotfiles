@@ -17,9 +17,3 @@ set showcmd
 set autoindent
 set smartindent
 set list listchars=tab:→\ ,trail:·
-
-" colors
-set t_Co=256
-set termguicolors
-let g:tokyonight_style = 'storm'
-colorscheme tokyonight
