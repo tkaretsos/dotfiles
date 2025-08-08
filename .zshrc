@@ -83,14 +83,17 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='vi'
 else
-  export EDITOR='nvim'
+  if command -v nvim >/dev/null 2>&1; then
+    export EDITOR='nvim'
+  else
+    export EDITOR='vim'
+  fi
 fi
 
-if [ -f "$HOME/.secrets" ]; then
-  source "$HOME/.secrets"
-fi
+[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
+[ -d "$HOME/.scripts" ] && export PATH="$HOME/.scripts:$PATH"
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
