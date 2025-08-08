@@ -81,15 +81,11 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vi'
+# Set EDITOR
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR='nvim'
 else
-  if command -v nvim >/dev/null 2>&1; then
-    export EDITOR='nvim'
-  else
-    export EDITOR='vim'
-  fi
+  export EDITOR='vim'
 fi
 
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
